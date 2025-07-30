@@ -31,13 +31,22 @@ This repository contains 12 specialized subagents that can be invoked within Cla
 ## Usage
 
 ### In Claude Code
-Invoke any subagent using the Task tool:
+You need to explicitly tell Claude Code to use a subagent:
 
+**Specify the agent directly:**
 ```
-Use the Task tool with subagent_type: "backend-developer" 
-Description: "Create user authentication API"
-Prompt: "Design and implement a secure JWT-based authentication system with rate limiting and multi-tenant support"
+"Use the backend-developer subagent to create a JWT authentication system"
 ```
+
+**Or create a custom slash command:**
+```
+Create /backend-dev slash command that uses the backend-developer subagent
+```
+
+**Example requests:**
+- "Use the security-eng subagent to audit this authentication code"
+- "Have the debugger subagent analyze this production error"
+- "Use the frontend-dev subagent to optimize this React component"
 
 ### Key Features
 - **Specialized Expertise**: Each agent focuses on specific domain knowledge
